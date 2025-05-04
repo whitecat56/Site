@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Devs🎮 — Курс от Misterx_Program</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pc-mode">
+
+  <!-- Кнопка для переключения режимов -->
+  <button class="btn-toggle" onclick="toggleMode()">Переключить режим</button>
+
+  <div id="preloader"><div class="loader"></div></div>
+
+  <canvas id="bg"></canvas>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="your-music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="hero">
+    <div class="avatar"></div>
+    <h1>Game Devs🎮</h1>
+    <p>Онлайн-курс по созданию игр, программированию, графике и дизайну</p>
+    <button class="btn-main" onclick="alert('Скоро будет доступно!')">Войти</button>
+  </div>
+
+  <div class="section about-course" id="about">
+    <h2 class="animate">О курсе</h2>
+    <div class="course-info">
+      <p>Изучай с нуля: HTML, CSS, JS, графику, интерьерный дизайн, создание игр.</p>
+      <p>Для школьников 10–18 и взрослых 18+.</p>
+      <p>Теория + практика, менторы, мини-игры и реальные проекты!</p>
+    </div>
+    <div class="registration">
+      <button class="btn-register" onclick="window.location.href='https://forms.gle/uS1hVae3gn9HTidz9'">Записаться</button>
+    </div>
+  </div>
+
+  <div class="courses">
+    <div class="course">
+      <h3>🔧 Программирование с нуля</h3>
+      <p>Основы HTML, CSS, JS. Создание сайтов, интерактива и логики игр.</p>
+    </div>
+    <div class="course">
+      <h3>🎨 Графический дизайн</h3>
+      <p>Работа в Figma, Canva, Photoshop. Создание обложек, логотипов, интерфейсов.</p>
+    </div>
+    <div class="course">
+      <h3>🎮 Разработка игр</h3>
+      <p>Создание игр на Construct, Unity, Godot. Дизайн уровней, геймплей и UI.</p>
+    </div>
+  </div>
+
+  <div class="section contacts-section">
+    <h2>Контакты</h2>
+    <div class="contacts-grid">
+      <div class="contact-left">
+        <h3>Связь</h3>
+        <a href="tel:+998903411322">📞 +998 90 341 13 22</a>
+        <a href="https://t.me/Mister_xsd" target="_blank">👤 @Mister_xsd</a>
+      </div>
+      <div class="contact-right">
+        <h3>📢 Telegram</h3>
+        <p><a href="https://t.me/+0mtJkF-m36k1ZjZi" target="_blank">Канал</a></p>
+        <p><a href="https://t.me/Misterxprogram" target="_blank">Группа</a></p>
+        <div class="contact-buttons">
+          <button class="btn-support" onclick="alert('Открывается поддержка...')">✉️ Поддержка</button>
+          <button class="btn-support" onclick="alert('Связь с преподавателем...')">📬 Написать преподавателю</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

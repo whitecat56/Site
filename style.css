@@ -1,0 +1,247 @@
+/* Основное */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: #ff66c4;
+  text-shadow: 0 0 10px #ff66c4;
+}
+
+a { color: #ff66c4; text-decoration: none; display: block; margin: 10px 0; }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle, #1a1a1a, #000);
+}
+
+.hero h1 { font-size: 3em; }
+.hero p { font-size: 1.2em; max-width: 600px; text-align: center; }
+
+.btn-main, .btn-register, .btn-support {
+  background: #ff66c4;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+.btn-main:hover, .btn-register:hover, .btn-support:hover {
+  background: #e055b4;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.courses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 250px;
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border: 6px solid #222;
+  border-top: 6px solid #ff66c4;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contacts-section {
+  background: #111;
+  border-radius: 15px;
+  padding: 60px 40px;
+  margin: 80px auto;
+  max-width: 1000px;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-left, .contact-right {
+  flex: 1 1 400px;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 102, 196, 0.3);
+}
+
+.contact-left h2, .contact-right h2 {
+  color: #ff66c4;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-left p, .contact-right p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact-left a, .contact-right a {
+  color: #ff66c4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-left a:hover, .contact-right a:hover {
+  color: #ffffff;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-support {
+  background: #ff66c4;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff66c4;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.btn-support:hover {
+  background: #e055b4;
+  transform: scale(1.03);
+}
+
+.contacts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-left, .contact-right {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.contact-left h3, .contact-right h3 {
+  color: #ff66c4;
+  margin-bottom: 10px;
+}
+
+.contact-left a, .contact-right a {
+  display: block;
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.contact-left a:hover, .contact-right a:hover {
+  color: #ff66c4;
+}
+
+.btn-support {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Мобильный режим */
+@media screen and (max-width: 768px) {
+  body.phone-mode {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .courses {
+    flex-direction: column;
+  }
+
+  .course {
+    width: 100%;
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+
+  .contacts-grid {
+    flex-direction: column;
+  }
+}
+
+/* Кнопка переключения режимов */
+.btn-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff66c4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff66c4;
+  font-size: 1em;
+}
